@@ -69,6 +69,7 @@ public class HelloController {
         return "test4";
     }
 
+    
     @RequestMapping(value = "/test5")
     @ResponseBody
     public String test5(StuEntity stu,Model model) {
