@@ -1,13 +1,32 @@
 package com.shinowit.web;
 
+import com.shinowit.entity.SexType;
+import com.shinowit.framework.dao.BaseDAO;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.View;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * Created by Administrator on 2014/12/19.
  */
-@RequestMapping(value="inpramam")
+@Controller
+@RequestMapping(value="/inpramam")
 public class InPramaController {
 
-    public
+    @Resource
+    private BaseDAO<SexType> sex_dao;
+
+    @RequestMapping("/test4")
+    public View test4(Model model){
+        List<SexType> sexTypeList=sex_dao.listAll(SexType.class);
+        model.addAttribute("sex_type_list",sexTypeList);
+        SexTypeExcelView result=new SexTypeExcelView();
+        return result;
+    }
+
 
 }
