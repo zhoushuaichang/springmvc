@@ -264,6 +264,13 @@
             <version>3.1.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.2</version>
+        </dependency>
+
+
         <!--View 类型的返回值，返回Excel或者PDF-->
         <dependency>
             <groupId>org.apache.poi</groupId>

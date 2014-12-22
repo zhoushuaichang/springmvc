@@ -178,8 +178,24 @@ public class BaseDAO<T> {
     }
 
 
-    public List<Object[]> findBySql(String sql, final Object... objects) {
-        List<Object[]> result = null;
+//    public List<Object[]> findBySql(String sql, final Object... objects) {
+//        List<Object[]> result = null;
+//        Session session = null;
+//        try {
+//            session = sessionFactory.getCurrentSession();
+//            Query query = session.createSQLQuery(sql);
+//            for (int i = 0; i < objects.length; i++) {
+//                query.setParameter(i, objects[i]);
+//            }
+//            result = query.list();
+//        } catch (Exception e) {
+//            logger.error(e.getMessage(), e);
+//        }
+//        return result;
+//    }
+
+    public List<T> findBySql(String sql, final Object... objects) {
+        List<T> result = null;
         Session session = null;
         try {
             session = sessionFactory.getCurrentSession();

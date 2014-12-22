@@ -7,14 +7,18 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <html>
 <head>
     <title></title>
 </head>
+
 <body>
-
-你真棒！
-
+<form:form action="/inprama/test1" method="post" >
+   <input type="text" name="stuName"/>
+    <input type="submit"/>
+</form:form>
 
 </body>
 </html>
