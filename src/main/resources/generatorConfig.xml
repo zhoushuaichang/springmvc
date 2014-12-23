@@ -17,6 +17,7 @@
             <property name="searchString" value="Example$"/>
             <property name="replaceString" value="Criteria"/>
         </plugin>
+        <plugin type="com.shinowit.mybatis.plugin.SelectByPage4MySqlPlugin"/>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://127.0.0.1:3306/test?useUnicode=true"
@@ -59,6 +60,14 @@
         </table>
         <table tableName="tea">
             <generatedKey column="tea_id" sqlStatement="MySql"
+                          identity="true"/>
+        </table>
+        <table tableName="teacher">
+            <generatedKey column="teacher_id" sqlStatement="MySql"
+                          identity="true"/>
+        </table>
+        <table tableName="student">
+            <generatedKey column="student_id" sqlStatement="MySql"
                           identity="true"/>
         </table>
 

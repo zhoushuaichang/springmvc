@@ -39,7 +39,21 @@
         <!--maxWait: 超时等待时间以毫秒为单位 1000等于60秒-->
         <property name="maxWait" value="1000"/>
     </bean>
-
+    <!--log4jdbc 日志调试-->
+    <bean id="log4jdbcInterceptor" class="net.sf.log4jdbc.DataSourceSpyInterceptor"/>
+    <bean id="dataSourceLog4jdbcAutoProxyCreator"
+          class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+        <property name="interceptorNames">
+            <list>
+                <value>log4jdbcInterceptor</value>
+            </list>
+        </property>
+        <property name="beanNames">
+            <list>
+                <value>dataSource</value>
+            </list>
+        </property>
+    </bean>
 
     <!--
  define the SqlSessionFactory, notice that configLocation is not needed

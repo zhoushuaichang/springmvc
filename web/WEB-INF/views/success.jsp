@@ -12,7 +12,7 @@
     <title></title>
 </head>
 <body>
-${title}
+
 你真棒！
 
 
