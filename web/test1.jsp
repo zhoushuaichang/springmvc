@@ -12,9 +12,9 @@
     <title></title>
 </head>
 <body>
-<form action="/inprama/test1" method="post">
-    <input path="stuId" />
-    <input path="stuName"/>
+<form action="/inprama/test2" method="post">
+    <spring:message code="stu.stuName"/>    <input type="text" name="stuId"/>
+    ${stu.stuName} <input type="text" name="stuName"/>
     <input type="submit"/>
 </form>
 

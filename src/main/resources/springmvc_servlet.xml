@@ -62,7 +62,7 @@
     <mvc:resources mapping="/upload/**" location="/upload/"/>
 
     <mvc:interceptors>
-        <bean class="com.shinowit.interceptor.LoginInterceptor"/>
+        <bean class="com.shinowit.web.LoginInterceptor"/>
     </mvc:interceptors>
     <!--
     <mvc:interceptors>

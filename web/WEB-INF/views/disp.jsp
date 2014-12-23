@@ -18,14 +18,17 @@ ${error}
 <form:form action="/test/test3" method="post" modelAttribute="stu">
     <form:select path="stuId" items="${stuList}" itemLabel="stuName" itemValue="stuId"></form:select>
     <input type="submit"/>
+
+    <c:forEach items="${stuList}" var="stu">
+        <tr>
+            <td>${stu.stuId}</td>
+            <td>${stu.stuName}</td>
+        </tr>
+    </c:forEach>
+
 </form:form>
 
-<c:forEach items="${stuList}" var="stu">
-    <tr>
-        <td>${stu.stuId}</td>
-        <td>${stu.stuName}</td>
-    </tr>
-</c:forEach>
+
 
 </body>
 </html>
